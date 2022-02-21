@@ -1,0 +1,163 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Menipulation</title>
+</head>
+<body  id="body">
+    <!-- by Id -->
+    <!-- <h4 id="fetchbyid">getelementbyid()- using this method we change html elements stylings using id name  </h4> -->
+    <!-- by class -->
+
+    <!-- <p class="a">Getelementclass()-  thought this method we change html element using class name</p> -->
+<!-- by tag name -->
+     <!-- <p>hello world </p>/ -->
+    
+
+<!--  By Query selector -->
+<p class="queryselector queryselectorAll">queryselecotr</p>
+<p class="queryselector queryselectorAll">queryselecotr</p>
+<p class="queryselector queryselectorAll"   id="query">queryselecotr</p>
+
+
+<!-- <ul>
+<li>Item1</li>
+<li>Item2</li>
+<li>Item3</li>
+<li>Item4</li>
+
+</ul> -->
+
+<!--  create user define attributes -->
+<!--  id is inbuilt tag so it global , but data is note inbuild that resone data  return undefined,  -->
+<!--  so to access data attribute , we use getattribute (this will work with inbuild or user defined both)-->
+
+    <li  id="li"  data="valid">get Attributes</li>
+    
+
+</body>
+<script>
+ //  get element by id-------------------
+
+//  fetchbyid.style.background= 'red'
+//   or
+
+// let fetchId= document.getElementById('fetchbyid')
+// fetchId.style.backgroundColor='red'
+
+
+
+//  ----------------------------------getElementByClass()------------------
+// var abc =document.getElementsByClassName('queryselector').style.background='green'
+
+// ----------------------------------getElementByName()------------------
+
+
+//  let byName= document.getElementsByName('byname')
+//  byName.style.backgroundColor='red'
+
+// let ta= document.getElementByTagName('bytag')
+// ta.style.backgroundColor='red'
+
+// for single element select
+// document.querySelector('.queryselector').style.backgroundColor='red';
+
+// for single element select
+// document.querySelectorAll('.queryselector').style.background='green'
+
+
+//  &&
+// using id
+// document.querySelector('#query').style.background='green'
+ 
+// &&
+
+
+// console.log(document.querySelectorAll('ul >  li:last-child ')[0].textContent);
+
+
+// ------------note----------------
+// queryselector are static and getelement are change in runtime
+
+
+
+//      getAttributes
+// console.log(li.data);
+// console.log(li.getAttribute('data'));
+
+// for set Atribute
+console.log(li.setAttribute('setattri', 'pendingvalue'))
+console.log(li.getAttribute('setattri'));
+
+
+//  for check all attributes
+
+// console.log(li.attributes)
+
+
+//  remov atrribute
+// console.log(li.removeAttribute('setattri'));
+// console.log(li.attributes)
+
+
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+
+//  Creating and Removing element node element
+//   create
+const newDiv= document.createElement('div')
+const newDiv2= document.createElement('div')
+const newtext= document.createTextNode('namaste World')
+
+                    // &&
+newDiv2.textContent= " hello wolrd i am ganpat"
+body.append(newDiv2)
+
+
+// add into html
+newDiv.appendChild(newtext)
+//  append use for add element at the last
+body.append(newDiv)
+
+//  append use for add element at the start
+body.prepend(newDiv)
+
+
+//RelpaceWith-  replace element  
+// query.replaceWith(newDiv)
+
+//Remove- remove element  
+// newDiv2.remove()
+
+
+//  innerhtml- for add particuler html code
+const newDiv3= document.createElement('div')
+newDiv3.innerHTML=`<ul>
+<li>Item1</li>
+<li>Item2</li>
+<li>Item3</li>
+<li>Item4</li>
+
+</ul> `
+ body.prepend(newDiv3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
+
