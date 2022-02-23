@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a JavaScript function to get the values of First and Last name of the following form. -->
+<input id="fname" value="ganpat" type="text" placeholder="FirstName">
+<input id="lname" value="koli" type="text" placeholder="LastName">
+<button id="btn">click</button>
+
+</body>
+<script>
+// let fname = document.getElementById('fname').value
+// let lname = document.getElementById('lname').value
+
+// function change(){
+// alert(`first Name is ${fname} LastName is ${lname}`)
+// }
+
+// btn.onclick= change
+
+
+btn.addEventListener('click', ()=>{
+    
+document.getElementById('lname').value    
+alert(`FirstName= ${document.getElementById('fname').value}, LastName - ${document.getElementById('lname').value}`)
+
+})
+
+
+
+
+</script>
+</html>
