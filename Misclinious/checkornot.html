@@ -1,0 +1,19 @@
+<html>  
+<head>  
+<style>  
+    .myClass1{background: red;}  
+    .myClass2 {background: blue;}  
+</style>  
+</head>  
+<body>  
+<h3> Click on the button to add or remove the class</h3> </br>  
+  <input type="button" id="Btn" value="Click me" class="class1 myClass1" onclick="get_toggle();">  
+<script>  
+    function get_toggle()  
+    {  
+      var e = document.getElementById("Btn");  
+      e.classList.toggle("myClass2");  
+    }  
+  </script>  
+</body>  
+</html>  
